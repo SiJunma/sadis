@@ -1,0 +1,244 @@
+extends ../layout/layout.pug
+
+block header
+  header.header-main    
+      .header__content 
+        .header__title
+          .container 
+            h1 
+              span.js-header-title-first Focused 
+              span.header__title-paint.js-header-title-second on you.
+
+        .header__media 
+          .container 
+            video(autoplay muted loop) 
+              source(src='img/header-placeholder.mp4' type='video/mp4')
+              | Your browser does not support the video tag.
+
+        .header__discover 
+          .container 
+            a.btn.btn-header(href="#")
+              | Discover sadis
+              span.btn-header__svg 
+                svg(width="15" height="19" viewBox="0 0 15 19" xmlns="http://www.w3.org/2000/svg")
+                  <path d="M14.6243 11.267L13.7902 10.5297L8.05717 17.0152L8.05717 -2.87057e-07L6.94389 -3.3572e-07L6.94389 17.0152L1.2109 10.5297L0.376793 11.267L7.21252 19L7.78854 19L14.6243 11.267Z"/>
+
+
+block content
+  .main-wrapper 
+    .main__aside 
+      .container
+        section.content-list 
+          ul 
+            li: a(href="#").current Sadis & Goldberg
+            li: a(href="#") Bespoke legal solutions
+            li: a(href="#") What we can do for you
+            li: a(href="#") FEEDBACK
+            li: a(href="#") News & Trends
+            li: a(href="#") Let’s talk
+    
+    .main__main
+      .container
+        .main__content 
+          section.default-section.bg-noise#section_1 
+            h2 
+              | Committed to 
+              span your goals.
+
+            p 
+              | At 
+              a(href="#") Sadis & Goldberg
+              | , we believe that every action we take as lawyers should lead to greater success for our clients. Our passion for service, deep business and financial services experience, and sensible billing model provide uncommon value without compromise.
+
+          section.default-section#section_3 
+            .main__images-box
+              .main__image-big
+                img(src="img/section__img1.jpg", alt="")
+
+              .main__image-small
+                img(src="img/section__img2.jpg", alt="")
+
+            h2 
+              span Bespoke
+              |  legal solutions.
+
+            p Every business is as unique as the entrepreneurs who drive them forward. We invest the time needed to fully understand your business, values, and goals—and align our services to maximize effectiveness and impact. We build and nurture long-term relationships based on earned trust and measurable results.
+
+          section.default-section.bg-noise#section_4
+            .custom-accordion.main-accordion 
+
+              button.custom-accordion__btn
+                h3 Blockchain & Digital Assets
+                svg(width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg")
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M25.7759 5L24.7052 22.1311L22.7091 22.0064L23.5441 8.64599L5.41421 26.7759L4 25.3616L22.1299 7.23178L8.76948 8.0668L8.64473 6.0707L25.7759 5Z" />
+              .custom-accordion__panel
+                p At Sadis & Goldberg, we believe that every action we take as lawyers should lead to greater success for our clients. Our passion for service, deep business and financial services experience, and sensible billing model provide uncommon value without compromise.
+
+              button.custom-accordion__btn
+                h3 Cannabis
+                svg(width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg")
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M25.7759 5L24.7052 22.1311L22.7091 22.0064L23.5441 8.64599L5.41421 26.7759L4 25.3616L22.1299 7.23178L8.76948 8.0668L8.64473 6.0707L25.7759 5Z" />
+              .custom-accordion__panel
+                p Every business is as unique as the entrepreneurs who drive them forward. We invest the time needed to fully understand your business, values, and goals—and align our services to maximize effectiveness and impact. We build and nurture long-term relationships based on earned trust and measurable results.
+
+              button.custom-accordion__btn.active 
+                h3 Corporate
+                svg(width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg")
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M25.7759 5L24.7052 22.1311L22.7091 22.0064L23.5441 8.64599L5.41421 26.7759L4 25.3616L22.1299 7.23178L8.76948 8.0668L8.64473 6.0707L25.7759 5Z" />
+              .custom-accordion__panel(style='display: block;')
+                .row.g-0
+                  .col-6
+                    p:  a(href="#")  Corporate Structuring and Restructuring
+                    p  Employment & Employee Benefits
+                    p:  a(href="#")  ESOP
+                    p:  a(href="#")  Mergers & Acquisitions
+                    p:  a(href="#")  Private Equity
+                    p:  a(href="#")  Securities
+
+                  .col-6 
+                    img(src="img/section__img3.jpg", alt="")
+
+              button.custom-accordion__btn
+                h3 Family OFFICe
+                svg(width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg")
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M25.7759 5L24.7052 22.1311L22.7091 22.0064L23.5441 8.64599L5.41421 26.7759L4 25.3616L22.1299 7.23178L8.76948 8.0668L8.64473 6.0707L25.7759 5Z" />
+              .custom-accordion__panel
+                p At Sadis & Goldberg, we believe that every action we take as lawyers should lead to greater success for our clients. Our passion for service, deep business and financial services experience, and sensible billing model provide uncommon value without compromise.
+
+              button.custom-accordion__btn
+                h3 Investment Funds
+                svg(width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg")
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M25.7759 5L24.7052 22.1311L22.7091 22.0064L23.5441 8.64599L5.41421 26.7759L4 25.3616L22.1299 7.23178L8.76948 8.0668L8.64473 6.0707L25.7759 5Z" />
+              .custom-accordion__panel
+                p At Sadis & Goldberg, we believe that every action we take as lawyers should lead to greater success for our clients. Our passion for service, deep business and financial services experience, and sensible billing model provide uncommon value without compromise.
+              
+              button.custom-accordion__btn
+                h3 Litigation
+                svg(width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg")
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M25.7759 5L24.7052 22.1311L22.7091 22.0064L23.5441 8.64599L5.41421 26.7759L4 25.3616L22.1299 7.23178L8.76948 8.0668L8.64473 6.0707L25.7759 5Z" />
+              .custom-accordion__panel
+                p At Sadis & Goldberg, we believe that every action we take as lawyers should lead to greater success for our clients. Our passion for service, deep business and financial services experience, and sensible billing model provide uncommon value without compromise.
+
+              button.custom-accordion__btn
+                h3 Real Estate
+                svg(width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg")
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M25.7759 5L24.7052 22.1311L22.7091 22.0064L23.5441 8.64599L5.41421 26.7759L4 25.3616L22.1299 7.23178L8.76948 8.0668L8.64473 6.0707L25.7759 5Z" />
+              .custom-accordion__panel
+                p At Sadis & Goldberg, we believe that every action we take as lawyers should lead to greater success for our clients. Our passion for service, deep business and financial services experience, and sensible billing model provide uncommon value without compromise.
+
+              button.custom-accordion__btn
+                h3 Regulatory Compliance
+                svg(width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg")
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M25.7759 5L24.7052 22.1311L22.7091 22.0064L23.5441 8.64599L5.41421 26.7759L4 25.3616L22.1299 7.23178L8.76948 8.0668L8.64473 6.0707L25.7759 5Z" />
+              .custom-accordion__panel
+                p At Sadis & Goldberg, we believe that every action we take as lawyers should lead to greater success for our clients. Our passion for service, deep business and financial services experience, and sensible billing model provide uncommon value without compromise.
+
+              button.custom-accordion__btn
+                h3 Tax & ERISA
+                svg(width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg")
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M25.7759 5L24.7052 22.1311L22.7091 22.0064L23.5441 8.64599L5.41421 26.7759L4 25.3616L22.1299 7.23178L8.76948 8.0668L8.64473 6.0707L25.7759 5Z" />
+              .custom-accordion__panel
+                p At Sadis & Goldberg, we believe that every action we take as lawyers should lead to greater success for our clients. Our passion for service, deep business and financial services experience, and sensible billing model provide uncommon value without compromise.
+
+          section.default-section.feedback-section.bg-noise#section_5
+            .splide.feedback-slider 
+              .splide__arrows
+                button.splide__arrow.splide__arrow--prev Prev
+                  svg(width="29" height="23" viewBox="0 0 29 23" xmlns="http://www.w3.org/2000/svg")
+                    <path d="M11.805 0.626952L12.9303 1.90006L3.03144 10.6504L29.002 10.6504L29.002 12.3496L3.03144 12.3496L12.9303 21.1L11.805 22.3731L0.00195595 11.9396L0.00195603 11.0604L11.805 0.626952Z"/>
+
+                button.splide__arrow.splide__arrow--next Next
+                  svg(width="29" height="23" viewBox="0 0 29 23" xmlns="http://www.w3.org/2000/svg")
+                    <path d="M17.195 0.626952L16.0697 1.90006L25.9686 10.6504L-0.00195225 10.6504L-0.0019521 12.3496L25.9686 12.3496L16.0697 21.1L17.195 22.3731L28.998 11.9396L28.998 11.0604L17.195 0.626952Z"/>
+
+              .splide__track
+                ul.splide__list
+                  li.splide__slide
+                    .feedback__card 
+                      q No law firm is better in the hedge fund space. <br> Sadis doesn't just know the legal framework, they are on the cutting edge of defining it.
+
+                      .feedback__author 
+                        span.feedback__author-name John Sterling
+                        span.feedback__author-status Founder, Sterling Fund Managers
+
+                  li.splide__slide
+                    .feedback__card 
+                      q No law firm is better in the hedge fund space. <br> Sadis doesn't just know the legal framework, they are on the cutting edge of defining it.
+
+                      .feedback__author 
+                        span.feedback__author-name John Sterling
+                        span.feedback__author-status Founder, Sterling Fund Managers
+
+          section.default-section.blog-section.bg-noise#section_6
+            .blog-section__title-line
+              h2 News & Trends
+              .blog-section__tabs-box 
+                button.blog-section__tab-btn.active(data-target="#blog_tab1") News
+                button.blog-section__tab-btn(data-target="#blog_tab2") Trends
+
+            .blog-section__tab-content 
+              .blog-section__tab-panel#blog_tab1.active
+                .blog-section__layout 
+
+                  .blog-section__card.big 
+                    time January 27, 2022
+                    h5 Digital US Dollar By 2025? ‘Inevitable Evolution’ Could Come Quickly  — GOBankingRates Article.
+                    .blog-section__card-img 
+                      img(src="img/blog1.jpg", alt="")
+                  .blog-section__card.small 
+                    time January 26, 2022
+                    h5 Donec consectetur sed pulvinar odio quam facilisi. Sed ornare vestibulum est porttitor.
+                    .blog-section__card-img 
+                      img(src="img/blog2.jpg", alt="")
+                  .blog-section__card.small 
+                    time February 28, 2022
+                    h5 Viverra condimentum metus lacus, vitae risus viverra. Lacinia diam sapien volutpat in cras in.
+                    .blog-section__card-img 
+                      img(src="img/blog3.jpg", alt="")
+
+              .blog-section__tab-panel#blog_tab2
+                .blog-section__layout 
+
+                  .blog-section__card.big 
+                    time January 27, 2022
+                    h5 Ipsum netus semper dictum duis morbi convallis semper. 
+                    .blog-section__card-img 
+                      img(src="img/blog3.jpg", alt="")
+                  .blog-section__card.small 
+                    time January 26, 2022
+                    h5 Vitae venenatis ac aliquam facilisis auctor tempus, cras fringilla consequat. Sapien risus.
+                    .blog-section__card-img 
+                      img(src="img/blog1.jpg", alt="")
+                  .blog-section__card.small 
+                    time February 28, 2022
+                    h5 Consequat, praesent porttitor elementum laoreet
+                    .blog-section__card-img 
+                      img(src="img/blog2.jpg", alt="")
+
+            .blog-section__btn-box 
+              a.btn.btn-line.blue 
+                | More news
+                svg(width="19" height="19" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg")
+                  <path d="M5.71306 3.21467L5.7815 4.32584L14.4213 3.79374L2.38973 15.8253L3.17694 16.6125L15.2085 4.58095L14.6764 13.2207L15.7875 13.2892L16.422 2.98751L16.0147 2.5802L5.71306 3.21467Z"/>
+
+          section.default-section#section_7 
+            h2 
+              | Let’s 
+              span talk.
+
+            p We are eager to learn about your business objectives and brainstorm on how we can help you achieve them.
+
+            .contact-form__wrapper  
+              form(action="")
+                .form-group 
+                  input#contact_name(type="text", name="Name" placeholder="Your name").form-input
+                  input#contact_email(type="email", name="Email" placeholder="Your email").form-input
+                  button(type="submit").btn.btn-blue 
+                    | Send a message 
+                    svg(width="19" height="20" viewBox="0 0 19 20" xmlns="http://www.w3.org/2000/svg")
+                      <path d="M5.71306 3.71467L5.7815 4.82584L14.4213 4.29374L2.38973 16.3253L3.17694 17.1125L15.2085 5.08095L14.6764 13.7207L15.7875 13.7892L16.422 3.48751L16.0147 3.0802L5.71306 3.71467Z"/>
+
+                .form-group 
+                  textarea#contact_msg(name="", cols="30", rows="3", placeholder="Your message").form-input
+
+          section.default-section.bg-noise.placeholder-section#section_8

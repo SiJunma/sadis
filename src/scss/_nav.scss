@@ -1,0 +1,146 @@
+@import 'variables';
+
+.nav {
+  padding: 26px 0;
+  background: #fff;
+
+  .btn-burger  {
+    display: none;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 143px;
+    flex-shrink: 0;
+    margin-right: auto;
+
+    svg {
+      fill: $headersBlack;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &__menu {
+    flex-shrink: 0;
+    ul {    
+      display: flex;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      column-gap: 3.5em;
+    }
+    li {
+      text-align: center;
+
+      a {
+        text-transform: uppercase;
+        text-align: center;
+        text-decoration: none;
+        font-size: 14px;
+        color: $headersBlack;
+        font-weight: 400;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $mainBlue;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  &__interactive {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    margin-left: 66px;
+  }
+
+  &__search {
+    position: relative;
+
+    &-content {
+      opacity: 0;
+      visibility: hidden;
+      height: 0;
+      width: 0;
+      position: absolute;
+      display: none;
+
+      transition: opacity 0.3s ease;
+
+      &.opened {
+        opacity: 1;
+        width: auto;
+        visibility: visible;
+        height: auto;
+      }
+    }
+  }
+
+  &__btn-search {
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .nav__menu ul {
+    column-gap: 2.5em;
+  }
+
+  .nav__interactive {
+    margin-left: 3em;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .nav__interactive {
+    margin-left: 2em;
+  }
+  .nav__menu ul {
+    column-gap: 1.7em;
+  }
+}
+
+@media screen and (max-width: 992px) {
+
+  .nav {
+    &__menu {
+      display: none;
+    }
+
+    .btn-burger {
+      display: flex;
+      width: 35px;
+      height: 35px;
+      font-size: 0;
+      padding: 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: 22px;
+      cursor: pointer;
+
+      span {
+        margin-bottom: 9px;
+        height: 1px;
+        width: 22px;
+        display: block;
+        flex-shrink: 0;
+        background: $headersBlack;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  
+}

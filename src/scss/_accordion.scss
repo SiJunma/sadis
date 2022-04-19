@@ -1,0 +1,86 @@
+@import 'variables';
+
+.custom-accordion {
+  border-top: 1px solid $bgBlack;
+
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 40px;
+    position: relative;
+    padding-top: 25px;
+    padding-left: 0;
+    padding-bottom: 25px;
+    border: none;
+    border-bottom: 1px solid $bgBlack;
+    background: transparent;
+    cursor: pointer;
+
+    h3 {
+      transition: color 0.3s ease;
+      margin-bottom: 0;
+    }
+
+    svg {
+      flex-shrink: 0;
+      position: absolute;
+      right: 0;
+      top: 27px;
+      fill: $bgBlack;
+      transition: fill 0.3s ease, transform 0.3s ease;
+    }
+
+    &:hover {
+      h3 {
+        color: $headersBlackHover;
+      }
+
+      svg {
+        fill: $headersBlackHover;
+      }
+    }
+
+    &.active {
+      border-bottom-color: transparent;
+      padding-bottom: 22px;
+
+      h3 {
+        color: $mainBlue;
+      }
+  
+      svg {
+          transform: rotate(90deg);
+          fill: $mainBlue;
+      }
+  
+      & + .custom-accordion__panel {
+          padding-bottom: 25px;
+          border-bottom: 1px solid $bgBlack;
+      }
+    }
+  }
+
+  &__panel {
+    display: none;
+    font-size: 18px;
+    color: $bgBlack;
+    padding-left: 25px;
+
+    p {
+      font-size: 18px;
+    }
+
+    a {
+      color: $mainBlack;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}

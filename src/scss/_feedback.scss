@@ -1,0 +1,104 @@
+@import 'variables';
+
+.feedback {
+  &-section {
+    padding-top: 40px;
+    padding-bottom: 0;
+    width: calc(100% + #{$mainOffset});
+
+    @media screen and (max-width: 14600px) {
+      width: calc(100% + #{$mainOffset1600});
+    }
+
+    .splide__arrow {
+      width: 51px;
+      height: 51px;
+      font-size: 0;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+
+      svg {
+        fill: #fff;
+        transition: fill 0.3s ease;
+      }
+
+      &:hover {
+        svg {
+          fill: #A2D3F8;
+        }
+      }
+
+      &--prev {
+        left: 25px;
+      }
+
+      &--next {
+        right: 25px;
+      }
+    }
+  }
+
+  &-slider {
+    background: $mainBlue;
+    padding-left: $mainOffset;
+    padding-right: $mainOffset;
+
+    @media screen and (max-width: 14600px) {
+      padding-left: $mainOffset1600;
+      padding-right: $mainOffset1600;
+    }
+
+    padding-top: 75px;
+    padding-bottom: 56px;
+    color: #FFFFFF;
+    text-align: center;
+
+    q {
+      font-style: italic;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 120%;
+
+      @media screen and (max-width: 1600px) {
+        font-size: 32px;
+      }
+    }
+  }
+
+  &__card {
+    max-width: 815px;
+    margin: 0 auto;
+  }
+
+  &__author-name {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  &__author {
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 1600px) {
+      margin-top: 100px;
+    }
+  }
+
+  &__author-status {
+    font-weight: 500;
+    font-size: 14px;
+  }
+}

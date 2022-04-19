@@ -1,0 +1,125 @@
+@import 'variables';
+
+.blog-section {
+  &__title-line {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+
+  &__tabs-box {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+  }
+
+  &__tab-btn {
+    background: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+    color: #A8AAAF;
+    padding: 0;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+
+    &:hover {
+      color: $mainBlue;
+    }
+
+    &.active {
+      color: $mainBlack;
+      border-bottom-color: #000;
+    }
+  }
+
+  &__tab-panel {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+
+    transition: opacity 0.3s ease;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      height: auto;
+    }
+  }
+
+  &__tab-content {
+    padding-top: 25px;
+  }
+
+  &__layout {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto; 
+    gap: 16px; 
+    grid-template-areas: 
+      "big small"
+      "big small"; 
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+
+    h5 {
+      text-transform: none;
+      margin-bottom: 25px;
+    }
+
+    time {
+      font-weight: 400;
+      font-size: 14px;
+      color: #A8AAAF;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    &-img {
+      flex-grow: 1;
+      flex-shrink: 1;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    &.small { 
+      .blog-section__card-img {
+        height: calc(#{$sectionOffset + 70px});
+      }
+    }
+
+    
+    &.big { 
+      grid-area: big;
+
+      .blog-section__card-img {
+        height: 452px;
+      }
+    }
+  }
+
+  &__btn-box {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+
+    .btn {
+      height: 39px;
+    }
+  }
+}
