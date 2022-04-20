@@ -6,8 +6,12 @@
     padding-bottom: 0;
     width: calc(100% + #{$mainOffset});
 
-    @media screen and (max-width: 14600px) {
+    @media screen and (max-width: 1600px) {
       width: calc(100% + #{$mainOffset1600});
+    }
+
+    @media screen and (max-width: 1400px) {
+      width: 100%;
     }
 
     .splide__arrow {
@@ -24,7 +28,11 @@
       cursor: pointer;
       position: absolute;
       z-index: 1;
-      top: 50%;
+      top: calc(50% - 15px);
+
+      @media screen and (max-width: 576px) {
+        position: static;
+      }
 
       svg {
         fill: #fff;
@@ -39,10 +47,27 @@
 
       &--prev {
         left: 25px;
+
+        @media screen and (max-width: 1600px) {
+          left: 15px;
+        }
       }
 
       &--next {
         right: 25px;
+
+        @media screen and (max-width: 1600px) {
+          right: 15px;
+        }
+      }
+    }
+
+    .splide__arrows {
+      @media screen and (max-width: 576px) {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 35px;
+        margin-top: -15px;
       }
     }
   }
@@ -52,13 +77,30 @@
     padding-left: $mainOffset;
     padding-right: $mainOffset;
 
-    @media screen and (max-width: 14600px) {
+    @media screen and (max-width: 1600px) {
       padding-left: $mainOffset1600;
       padding-right: $mainOffset1600;
     }
 
+    @media screen and (max-width: 1400px) {
+      padding-left: 75px;
+      padding-right: 75px;
+    }
+
     padding-top: 75px;
+
+    @media screen and (max-width: 1200px) {
+      padding-top: 55px;
+    }
+    
     padding-bottom: 56px;
+
+    @media screen and (max-width: 576px) {
+      padding-bottom: 72px;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
     color: #FFFFFF;
     text-align: center;
 
@@ -70,6 +112,22 @@
 
       @media screen and (max-width: 1600px) {
         font-size: 32px;
+      }
+
+      @media screen and (max-width: 1400px) {
+        font-size: 28px;
+      }
+
+      @media screen and (max-width: 1400px) {
+        font-size: 24px;
+      }
+
+      @media screen and (max-width: 992px) {
+        font-size: 28px;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 18px;
       }
     }
   }
@@ -94,6 +152,10 @@
 
     @media screen and (max-width: 1600px) {
       margin-top: 100px;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-top: 65px;
     }
   }
 

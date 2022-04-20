@@ -1,11 +1,24 @@
 @import 'variables';
 
 .nav {
-  padding: 26px 0;
+  height: 80px;
   background: #fff;
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 576px) {
+    height: 75px;
+    padding: 0;
+  }
 
   .btn-burger  {
     display: none;
+  }
+
+  &__contact-btn {
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
   }
 
   &__wrapper {
@@ -17,6 +30,13 @@
     width: 143px;
     flex-shrink: 0;
     margin-right: auto;
+    display: flex;
+    align-items: center;
+
+    a {
+      display: flex;
+      align-items: center;
+    }
 
     svg {
       fill: $headersBlack;

@@ -9,6 +9,14 @@
     h2 {
       margin-bottom: 0;
     }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 40px;
+      margin-bottom: 25px;
+      margin-top: 20px;
+    }
   }
 
   &__tabs-box {
@@ -66,6 +74,15 @@
     grid-template-areas: 
       "big small"
       "big small"; 
+
+      @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "big"
+        "small";
+        gap: 20px; 
+      }
   }
 
   &__card {
@@ -75,6 +92,10 @@
     h5 {
       text-transform: none;
       margin-bottom: 25px;
+
+      @media screen and (max-width: 768px) {
+        margin-bottom: 15px;
+      }
     }
 
     time {
@@ -100,6 +121,14 @@
     &.small { 
       .blog-section__card-img {
         height: calc(#{$sectionOffset + 70px});
+
+        @media screen and (max-width: 1600px) {
+          height: calc(#{$sectionOffset1600 + 70px});
+        }
+
+        @media screen and (max-width: 768px) {
+            height: 240px;
+        }
       }
     }
 
@@ -109,6 +138,10 @@
 
       .blog-section__card-img {
         height: 452px;
+
+        @media screen and (max-width: 768px) {
+          height: 240px;
+        }
       }
     }
   }

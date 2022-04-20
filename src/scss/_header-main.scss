@@ -12,6 +12,17 @@
 
     h1 {
       margin-bottom: 0;
+
+      @media screen and (max-width: 992px) {
+        font-size: 64px;
+        color: #FFFFFF;
+        max-width: 302px;
+        margin-bottom: 136px;
+      }
+
+      @media screen and (max-width: 576px) {
+        font-size: 59px;
+      }
     }
 
     &-paint {
@@ -23,6 +34,10 @@
       position: relative;
       display: flex;
       align-items: center;
+
+      @media screen and (max-width: 992px) {
+        align-items: flex-end;
+      }
   
       &::before {
         content: '';
@@ -33,6 +48,10 @@
         height: 100%;
         top: 0;
         left: 12px;
+
+        @media screen and (max-width: 992px) {
+          display: none;
+        }
       }
     }
   }
@@ -50,6 +69,22 @@
 
     a.btn {
       margin-left: $headerOffset;
+
+      @media screen and (max-width: 1200px) {
+        margin-left: $headerOffset1200;
+      }
+
+      @media screen and (max-width: 992px) {
+        margin-left: 0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+
+      @media screen and (max-width: 425px) {
+        width: 100%;
+        justify-content: space-between
+      }
     }
   }
 
@@ -58,8 +93,17 @@
     position: relative;
     display: flex;
     align-items: center;
-    min-height: 776px;
+    min-height: 400px;
+    height: calc(100vh - 80px);
     overflow: hidden;
+
+    @media screen and (max-width: 768px) {
+      min-height: 350px;
+    }
+
+    @media screen and (max-width: 576px) {
+      height: calc(100vh - 75px);
+    }
   }
 
   .header__media {
@@ -77,12 +121,15 @@
     .container {
       width: 100%;
       position: relative;
+
+      @media screen and (max-width: 992px) {
+        position: static;
+      }
     }
 
     video {
       margin-left: $headerOffset;
       position: absolute;
-      height: 776px;
       flex-shrink: 0;
       flex-grow: 1;
       top: 0;
@@ -90,6 +137,27 @@
       left: 12px;
       object-fit: cover;
       object-position: center center;
+      width: 100%;
+
+      min-height: 400px;
+      height: calc(100vh - 80px);
+
+      @media screen and (max-width: 1200px) {
+        margin-left: $headerOffset1200;
+      }
+
+      @media screen and (max-width: 992px) {
+        margin-left: 0;
+        left: 0;
+      }
+
+      @media screen and (max-width: 768px) {
+        min-height: 350px;
+      }
+
+      @media screen and (max-width: 576px) {
+        height: calc(100vh - 75px);
+      }
     }
   }
 }

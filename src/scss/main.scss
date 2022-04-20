@@ -20,6 +20,10 @@ h1,h2,h3,h4,h5,h6 {
 
 h1 {
     font-size: 59px;
+
+    @media screen and (max-width: 1200px) {
+        font-size: 56px;
+    }
 }
 
 h2 {
@@ -47,10 +51,20 @@ h6 {
 
 .content-list {
     width: $headerOffset;
+
+    @media screen and (max-width: 1200px) {
+        width: $headerOffset1200;
+    }
+
     position: sticky;
     top: 0px;
     padding-top: $sectionOffset;
     padding-bottom: calc(#{$sectionOffset + 50px});
+
+    @media screen and (max-width: 1600px) {
+        padding-top: $sectionOffset1600;
+        padding-bottom: calc(#{$sectionOffset1600 + 50px});
+    }
   
     ul {
       display: flex;
@@ -97,6 +111,11 @@ h6 {
     padding-bottom: calc(#{$sectionOffset} - 5px);
     padding-top: $sectionOffset;
 
+    @media screen and (max-width: 1600px) {
+        padding-bottom: calc(#{$sectionOffset1600} - 5px);
+        padding-top: $sectionOffset1600;
+    }
+
     p {
         line-height: 120%;
         
@@ -118,8 +137,17 @@ h6 {
     }
 
     &.placeholder-section {
-        height: 150px;
+        height: calc(#{$sectionOffset} + 50px);
+
+        @media screen and (max-width: 1600px) {
+            height: calc(#{$sectionOffset1600} + 50px);
+        }
+
         padding: 0;
+
+        @media screen and (max-width: 992px) {
+            display: none;
+        }
     }
 }
 
@@ -156,8 +184,20 @@ h6 {
     margin-bottom: 50px;
     margin-top: -$sectionOffset;
 
-    @media screen and (max-width: 14600px) {
+    @media screen and (max-width: 1600px) {
+        margin-top: -$sectionOffset1600;
         left: -$mainOffset1600;
+    }
+
+    @media screen and (max-width: 1200px) {
+        left: -$mainOffset1200;
+    }
+
+    @media screen and (max-width: 992px) {
+        left: 0;
+        position: static;
+        display: flex;
+        align-items: flex-end;
     }
 }
 
@@ -165,14 +205,43 @@ h6 {
     &-big {
         width: calc(100% + #{$mainOffset});
 
-        @media screen and (max-width: 14600px) {
-            width: calc(100% + #{$mainOffset1600});
+        @media screen and (max-width: 1600px) {
+            width: calc(77% + #{$mainOffset1600});
+        }
+
+        @media screen and (max-width: 1200px) {
+            width: calc(77% + #{$mainOffset1200});
+        }
+
+        @media screen and (max-width: 992px) {
+            width: auto;
+            left: 0;
+            margin-left: calc(-55px - 12px);
+        }
+
+        @media screen and (max-width: 576px) {
+            margin-left: -20px;
         }
 
         img {
             width: 100%;
             height: auto;
             object-fit: contain;
+
+            @media screen and (max-width: 992px) {
+                object-fit: cover;
+                width: 79vw;
+                height: 45vw;
+            }
+
+            @media screen and (max-width: 768px) {
+                width: 100vw;
+                height: auto;
+            }
+
+            @media screen and (max-width: 576px) {
+                height: 300px;
+            }
         }
     }
     
@@ -182,14 +251,39 @@ h6 {
         right: calc(-360px - 15px - #{$mainOffset});
         bottom: 0;
 
-        @media screen and (max-width: 14600px) {
-            right: calc(-360px - 15px - #{$mainOffset1600});
+        @media screen and (max-width: 1600px) {
+            right: calc(-135px - 15px - #{$mainOffset1600});
+        }
+
+        @media screen and (max-width: 1400px) {
+            right: calc(-175px - 15px - #{$mainOffset1600});
+        }
+
+        @media screen and (max-width: 1200px) {
+            right: calc(-210px - 15px - #{$mainOffset1200});
+        }
+
+        @media screen and (max-width: 992px) {
+            position: static;
+            margin-left: 15px;
+            height: auto;
+            margin-right: calc(-55px - 12px);
+        }
+
+        @media screen and (max-width: 768px) {
+            display: none;
         }
 
         img {
             width: 100%;
             height: auto;
             object-fit: contain;
+
+            @media screen and (max-width: 992px) {
+                object-fit: cover;
+                width: 20vw;
+                height: 23vw;
+            }
         }
     }
 }
@@ -202,6 +296,15 @@ h6 {
         align-items: center;
         gap: 10px;
         margin-bottom: 10px;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 768px) {
+            gap: 18px 24px;
+        }
+
+        @media screen and (max-width: 576px) {
+            flex-direction: column;
+        }
 
         &:last-of-type {
             margin-bottom: 0;
@@ -210,11 +313,48 @@ h6 {
         & > * {
             flex-grow: 1;
             width: 25%;
+
+            @media screen and (max-width: 768px) {
+                width: 45%;
+
+                &.btn {
+                    order: 4;
+                    flex-grow: 0;
+                    width: 225px;
+                    margin: 0 auto;
+                    margin-top: 6px;
+                }
+            }
+
+            @media screen and (max-width: 576px) {
+                width: 100%;
+            }
         }
 
         .btn {
             height: 54px;
             font-size: 18px;
+
+            @media screen and (max-width: 1200px) {
+                font-size: 17px;
+                padding: 0 20px;
+
+                svg {
+                    margin-left: 10px;
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                font-size: 18px;
+            }
+
+            @media screen and (max-width: 576px) {
+                width: 100%;
+            }
+        }
+
+        textarea {
+            width: 100%;
         }
     }
 
@@ -241,6 +381,18 @@ h6 {
 
     textarea.form-input {
         height: auto;
+    }
+}
+
+.main-accordion {
+    margin-top: 90px;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 70px;
+    }
+
+    @media screen and (max-width: 576px) {
+        margin-top: 63px;
     }
 }
 

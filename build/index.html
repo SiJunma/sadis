@@ -7,7 +7,7 @@
     <title>SADIS</title>
     <meta property="og:title" content="SADIS">
     <meta property="og:description" content="At Sadis &amp; Goldberg, we believe that every action we take as lawyers should lead to greater success for our clients. Our passion for service, deep business and financial services experience, and sensible billing model provide uncommon value without compromise.">
-    <meta property="og:image" content="https://sadis.com/img/og-image.jpg">
+    <meta property="og:image" content="https://sijunma.github.io/sadis/build/img/og-image.jpg">
     <meta property="og:image:width" content="950">
     <meta property="og:image:height" content="554">
     <meta property="og:url" content="https://sadis.com">
@@ -49,7 +49,7 @@
               <li><a href="#">Join Us</a></li>
             </ul>
           </div>
-          <div class="nav__interactive"> <a class="btn btn-line" href="#">Contact </a>
+          <div class="nav__interactive"> <a class="btn btn-line nav__contact-btn" href="#">Contact </a>
             <div class="nav__search">
               <button class="btn btn-search nav__btn-search" id="search-btn">Search
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="12" r="9.5"/>
@@ -111,7 +111,7 @@
           </div>
         </div>
         <div class="main__main">
-          <div class="container">
+          <div class="container-fluid container-lg">
             <div class="main__content"> 
               <section class="default-section bg-noise" id="section_1"> 
                 <h2>
@@ -128,6 +128,8 @@
                 <p>Every business is as unique as the entrepreneurs who drive them forward. We invest the time needed to fully understand your business, values, and goals—and align our services to maximize effectiveness and impact. We build and nurture long-term relationships based on earned trust and measurable results.</p>
               </section>
               <section class="default-section bg-noise" id="section_4">
+                <h2>
+                    What we can do <span>for you.</span></h2>
                 <div class="custom-accordion main-accordion"> 
                   <button class="custom-accordion__btn">
                     <h3>Blockchain & Digital Assets</h3>
@@ -149,15 +151,16 @@
                   </button>
                   <div class="custom-accordion__panel" style="display: block;">
                     <div class="row g-0">
-                      <div class="col-6">
+                      <div class="col-md-7 col-lg-6 pe-4">
                         <p><a href="#"> Corporate Structuring and Restructuring</a></p>
+                        <p> Corporate</p>
                         <p> Employment & Employee Benefits</p>
                         <p><a href="#"> ESOP</a></p>
                         <p><a href="#"> Mergers & Acquisitions</a></p>
                         <p><a href="#"> Private Equity</a></p>
                         <p><a href="#"> Securities</a></p>
                       </div>
-                      <div class="col-6"> <img src="img/section__img3.jpg" alt=""></div>
+                      <div class="d-none d-md-block col-md-5 col-lg-6"> <img src="img/section__img3.jpg" alt=""></div>
                     </div>
                   </div>
                   <button class="custom-accordion__btn">
@@ -218,13 +221,13 @@
                     <ul class="splide__list">
                       <li class="splide__slide">
                         <div class="feedback__card"> 
-                          <q>No law firm is better in the hedge fund space. <br> Sadis doesn't just know the legal framework, they are on the cutting edge of defining it.</q>
+                          <q>No law firm is better in the hedge fund space. Sadis doesn't just know the legal framework, they are on the cutting edge of defining it.</q>
                           <div class="feedback__author"> <span class="feedback__author-name">John Sterling</span><span class="feedback__author-status">Founder, Sterling Fund Managers</span></div>
                         </div>
                       </li>
                       <li class="splide__slide">
                         <div class="feedback__card"> 
-                          <q>No law firm is better in the hedge fund space. <br> Sadis doesn't just know the legal framework, they are on the cutting edge of defining it.</q>
+                          <q>No law firm is better in the hedge fund space. Sadis doesn't just know the legal framework, they are on the cutting edge of defining it.</q>
                           <div class="feedback__author"> <span class="feedback__author-name">John Sterling</span><span class="feedback__author-status">Founder, Sterling Fund Managers</span></div>
                         </div>
                       </li>
@@ -293,12 +296,10 @@
                     <div class="form-group"> 
                       <input class="form-input" id="contact_name" type="text" name="Name" placeholder="Your name">
                       <input class="form-input" id="contact_email" type="email" name="Email" placeholder="Your email">
-                      <button class="btn btn-blue" type="submit">
+                      <button class="btn btn-blue" id="contact_submit" type="submit">
                          Send a message 
                         <svg width="19" height="20" viewBox="0 0 19 20" xmlns="http://www.w3.org/2000/svg"><path d="M5.71306 3.71467L5.7815 4.82584L14.4213 4.29374L2.38973 16.3253L3.17694 17.1125L15.2085 5.08095L14.6764 13.7207L15.7875 13.7892L16.422 3.48751L16.0147 3.0802L5.71306 3.71467Z"/></svg>
                       </button>
-                    </div>
-                    <div class="form-group"> 
                       <textarea class="form-input" id="contact_msg" name="" cols="30" rows="3" placeholder="Your message"></textarea>
                     </div>
                   </form>
@@ -311,7 +312,7 @@
       </div>
     </main>
     <footer class="footer"> 
-      <div class="container"> 
+      <div class="container-fluid container-md"> 
         <div class="row"> 
           <div class="col-12">  
             <div class="logo footer__logo"><a href="/"> 

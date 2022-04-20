@@ -46,6 +46,11 @@
 .main__content {
   background-color: #fff;
   margin-left: $headerOffset;
+
+  @media screen and (max-width: 1200px) {
+    margin-left: $headerOffset1200;
+  }
+
   position: relative;
 
   @media screen and (max-width: 992px) {
@@ -56,17 +61,33 @@
   .default-section {
     padding-left: $mainOffset;
 
-    @media screen and (max-width: 14600px) {
+    @media screen and (max-width: 1600px) {
       padding-left: $mainOffset1600;
     }
 
+    @media screen and (max-width: 1200px) {
+      padding-left: $mainOffset1200;
+    }
+
     @media screen and (max-width: 992px) {
-      padding-left: 0;
+      padding-left: 55px;
+      padding-right: 55px;
+    }
+
+    @media screen and (max-width: 575px) {
+      padding-left: 8px;
+      padding-right: 8px;
     }
   }
 
   .feedback-section {
     padding-left: 0;
+
+    @media screen and (max-width: 992px) {
+      margin-left: -12px;
+      width: 100vw;
+      padding-right: 0;
+    }
   }
 }
 
