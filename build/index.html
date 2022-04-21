@@ -83,9 +83,17 @@
         </div>
         <div class="header__media"> 
           <div class="container"> 
-            <video autoplay muted loop> 
-              <source src="img/header-placeholder.mp4" type="video/mp4">Your browser does not support the video tag.
-            </video>
+            <div class="header__media-wrapper overlay__wrapper">
+              <div class="overlay__box">
+                <div class="overlay-item" id="overlay-item1"></div>
+                <div class="overlay-item" id="overlay-item2"></div>
+                <div class="overlay-item" id="overlay-item3"></div>
+                <div class="overlay-item" id="overlay-item4"></div>
+              </div>
+              <video autoplay muted loop> 
+                <source src="img/header-placeholder.mp4" type="video/mp4">Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </div>
         <div class="header__discover"> 
@@ -98,14 +106,14 @@
       <div class="main-wrapper"> 
         <div class="main__aside"> 
           <div class="container">
-            <section class="content-list"> 
+            <section class="content-list" id="content-list">
               <ul> 
-                <li><a class="current" href="#">Sadis & Goldberg</a></li>
-                <li><a href="#">Bespoke legal solutions</a></li>
-                <li><a href="#">What we can do for you</a></li>
-                <li><a href="#">FEEDBACK</a></li>
-                <li><a href="#">News & Trends</a></li>
-                <li><a href="#">Let’s talk</a></li>
+                <li class="current"><a href="#section_1">Sadis & Goldberg</a></li>
+                <li><a href="#section_2">Bespoke legal solutions</a></li>
+                <li><a href="#section_3">What we can do for you</a></li>
+                <li><a href="#section_4">FEEDBACK</a></li>
+                <li><a href="#section_5">News & Trends</a></li>
+                <li><a href="#section_6">Let’s talk</a></li>
               </ul>
             </section>
           </div>
@@ -119,15 +127,29 @@
                 <p>
                    At <a href="#">Sadis & Goldberg</a>, we believe that every action we take as lawyers should lead to greater success for our clients. Our passion for service, deep business and financial services experience, and sensible billing model provide uncommon value without compromise.</p>
               </section>
-              <section class="default-section" id="section_3"> 
+              <section class="default-section"> 
                 <div class="main__images-box">
-                  <div class="main__image-big"><img src="img/section__img1.jpg" alt=""></div>
-                  <div class="main__image-small"><img src="img/section__img2.jpg" alt=""></div>
+                  <div class="main__image-big overlay__wrapper">
+                    <div class="overlay__box">
+                      <div class="overlay-item"></div>
+                      <div class="overlay-item"></div>
+                    </div><img src="img/section__img1.jpg" alt="">
+                  </div>
+                  <div class="main__image-small">
+                    <div class="overlay__wrapper">
+                      <div class="overlay__box">
+                        <div class="overlay-item"></div>
+                        <div class="overlay-item"></div>
+                      </div>
+                    </div><img src="img/section__img2.jpg" alt="">
+                  </div>
                 </div>
-                <h2> <span>Bespoke</span> legal solutions.</h2>
-                <p>Every business is as unique as the entrepreneurs who drive them forward. We invest the time needed to fully understand your business, values, and goals—and align our services to maximize effectiveness and impact. We build and nurture long-term relationships based on earned trust and measurable results.</p>
+                <div id="section_2">
+                  <h2> <span>Bespoke</span> legal solutions.</h2>
+                  <p>Every business is as unique as the entrepreneurs who drive them forward. We invest the time needed to fully understand your business, values, and goals—and align our services to maximize effectiveness and impact. We build and nurture long-term relationships based on earned trust and measurable results.</p>
+                </div>
               </section>
-              <section class="default-section bg-noise" id="section_4">
+              <section class="default-section bg-noise" id="section_3"> 
                 <h2>
                     What we can do <span>for you.</span></h2>
                 <div class="custom-accordion main-accordion"> 
@@ -207,7 +229,7 @@
                   </div>
                 </div>
               </section>
-              <section class="default-section feedback-section bg-noise" id="section_5">
+              <section class="default-section feedback-section bg-noise" id="section_4"> 
                 <div class="splide feedback-slider"> 
                   <div class="splide__arrows">
                     <button class="splide__arrow splide__arrow--prev">Prev
@@ -235,7 +257,7 @@
                   </div>
                 </div>
               </section>
-              <section class="default-section blog-section bg-noise" id="section_6">
+              <section class="default-section blog-section bg-noise" id="section_5"> 
                 <div class="blog-section__title-line">
                   <h2>News & Trends</h2>
                   <div class="blog-section__tabs-box"> 
@@ -287,7 +309,7 @@
                      More news
                     <svg width="19" height="19" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg"><path d="M5.71306 3.21467L5.7815 4.32584L14.4213 3.79374L2.38973 15.8253L3.17694 16.6125L15.2085 4.58095L14.6764 13.2207L15.7875 13.2892L16.422 2.98751L16.0147 2.5802L5.71306 3.21467Z"/></svg></a></div>
               </section>
-              <section class="default-section" id="section_7"> 
+              <section class="default-section" id="section_6"> 
                 <h2>
                    Let’s <span>talk.</span></h2>
                 <p>We are eager to learn about your business objectives and brainstorm on how we can help you achieve them.</p>
@@ -305,7 +327,7 @@
                   </form>
                 </div>
               </section>
-              <section class="default-section bg-noise placeholder-section" id="section_8"></section>
+              <section class="default-section bg-noise placeholder-section" id="section_7"> </section>
             </div>
           </div>
         </div>

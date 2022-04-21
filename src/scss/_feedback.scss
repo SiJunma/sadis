@@ -73,9 +73,10 @@
   }
 
   &-slider {
-    background: $mainBlue;
+    background-color: $mainBlue;
     padding-left: $mainOffset;
     padding-right: $mainOffset;
+    background:url('../img/feedback__bg1.svg') bottom left no-repeat, url('../img/feedback__bg2.svg') bottom right no-repeat, $mainBlue;
 
     @media screen and (max-width: 1600px) {
       padding-left: $mainOffset1600;
@@ -95,10 +96,16 @@
     
     padding-bottom: 56px;
 
+    @media screen and (max-width: 768px) {
+      background:url('../img/feedback__bg1.svg') bottom left no-repeat, url('../img/feedback__bg2.svg') bottom right no-repeat / 135px, $mainBlue;
+    }
+
     @media screen and (max-width: 576px) {
       padding-bottom: 72px;
       padding-left: 25px;
       padding-right: 25px;
+
+      background:url('../img/feedback__bg1.svg') bottom left no-repeat, url('../img/feedback__bg2.svg') bottom right no-repeat / 105px, $mainBlue;
     }
 
     color: #FFFFFF;

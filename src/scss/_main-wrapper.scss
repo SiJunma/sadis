@@ -16,10 +16,9 @@
 }
 
 .main__aside {
-  background: linear-gradient(90deg, $bgBlack 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+  // background: linear-gradient(90deg, $bgBlack 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
   position: absolute;
   width: 100%;
-  z-index: 0;
   height: 100%;
 
   @media screen and (max-width: 992px) {
@@ -29,6 +28,19 @@
   .container {
     height: 100%;
     position: relative;
+
+    &::after {
+      content: '';
+      background: $bgBlack;
+      display: block;
+      position: absolute;
+      left: $mainOffset;
+      height: 100%;
+      top: 0;
+      left: -60vw;
+      right: 50%;
+      z-index: -1;
+    }
 
     &::before {
       content: '';
@@ -51,7 +63,7 @@
     margin-left: $headerOffset1200;
   }
 
-  position: relative;
+  // position: relative;
 
   @media screen and (max-width: 992px) {
     margin-left: 0;
@@ -60,6 +72,7 @@
 
   .default-section {
     padding-left: $mainOffset;
+    position: relative;
 
     @media screen and (max-width: 1600px) {
       padding-left: $mainOffset1600;
@@ -77,6 +90,19 @@
     @media screen and (max-width: 575px) {
       padding-left: 8px;
       padding-right: 8px;
+    }
+
+    &:not(.bg-noise):after {
+      content: '';
+      z-index: -1;
+      display: block;
+      position: absolute;
+      height: 100%;
+      right: 0;
+      left: 0;
+      top: 0;
+      background-color: #fff;
+      background-repeat: repeat;
     }
   }
 

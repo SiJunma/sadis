@@ -21,3 +21,124 @@ $sectionOffset1600: 70px;
 $mainOffset: 100px;
 $mainOffset1600: 55px;
 $mainOffset1200: 45px;
+
+
+@mixin overlay-item($border, $before, $after) {
+  border: 1px solid;
+  border-width: 1px;
+  border-image-slice: 1;
+  position: relative;
+
+  @if $border {
+    @if $border == top {
+      border-image-source: linear-gradient(to left, #FFFFFF 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 50%);
+      border-right: none;
+      border-left: none;
+      border-bottom: none;
+    } @else if $border == bottom {
+      border-image-source: linear-gradient(to right, #FFFFFF 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 50%);
+      border-right: none;
+      border-left: none;
+      border-top: none;
+    } @else if $border == left {
+      border-image-source: linear-gradient(to top, #FFFFFF 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 50%);
+      border-right: none;
+      border-bottom: none;
+      border-top: none;
+    } @else if $border == right {
+      border-image-source: linear-gradient(to bottom, #FFFFFF 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 50%);
+      border-left: none;
+      border-bottom: none;
+      border-top: none;
+    } @else {
+      border: none;
+    }
+  }
+
+  &::after,
+  &::before {
+    display: block;
+    position: absolute;
+    content: '';
+  }
+
+  @if $before {
+    &::before {
+      @if $before == top {
+        right: 0;
+        top: 0;
+        bottom: unset;
+        left: unset;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to left, #FFFFFF 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 50%);
+      } @else if $before == bottom {
+        left: 0;
+        bottom: 0;
+        top: unset;
+        right: unset;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to right, #FFFFFF 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 50%);
+      } @else if $before == left {
+        left: 0;
+        bottom: 0;
+        top: unset;
+        right: unset;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(to top, #FFFFFF 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 50%);
+      } @else if $before == right {
+        right: 0;
+        top: 0;
+        bottom: unset;
+        left: unset;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(to bottom, #FFFFFF 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 50%);
+      } @else {
+        display: none;
+      }
+    }
+  }
+
+  @if $after {
+    &::after {
+      @if $after == top {
+        right: 0;
+        top: 0;
+        bottom: unset;
+        left: unset;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to left, #FFFFFF 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 50%);
+      } @else if $after == bottom {
+        left: 0;
+        bottom: 0;
+        top: unset;
+        right: unset;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to right, #FFFFFF 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 50%);
+      } @else if $after == left {
+        left: 0;
+        bottom: 0;
+        top: unset;
+        right: unset;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(to top, #FFFFFF 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 50%);
+      } @else if $after == right {
+        right: 0;
+        top: 0;
+        bottom: unset;
+        left: unset;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(to bottom, #FFFFFF 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 50%);
+      } @else {
+        display: none;
+      }
+    }
+  }
+}

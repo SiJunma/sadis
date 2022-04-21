@@ -11,9 +11,16 @@ block header
 
         .header__media 
           .container 
-            video(autoplay muted loop) 
-              source(src='img/header-placeholder.mp4' type='video/mp4')
-              | Your browser does not support the video tag.
+            .header__media-wrapper.overlay__wrapper
+              .overlay__box
+                .overlay-item#overlay-item1
+                .overlay-item#overlay-item2
+                .overlay-item#overlay-item3
+                .overlay-item#overlay-item4
+
+              video(autoplay muted loop) 
+                source(src='img/header-placeholder.mp4' type='video/mp4')
+                | Your browser does not support the video tag.
 
         .header__discover 
           .container 
@@ -28,19 +35,19 @@ block content
   .main-wrapper 
     .main__aside 
       .container
-        section.content-list 
+        section.content-list#content-list
           ul 
-            li: a(href="#").current Sadis & Goldberg
-            li: a(href="#") Bespoke legal solutions
-            li: a(href="#") What we can do for you
-            li: a(href="#") FEEDBACK
-            li: a(href="#") News & Trends
-            li: a(href="#") Let’s talk
+            li.current: a(href="#section_1") Sadis & Goldberg
+            li: a(href="#section_2") Bespoke legal solutions
+            li: a(href="#section_3") What we can do for you
+            li: a(href="#section_4") FEEDBACK
+            li: a(href="#section_5") News & Trends
+            li: a(href="#section_6") Let’s talk
     
     .main__main
       .container-fluid.container-lg
         .main__content 
-          section.default-section.bg-noise#section_1 
+          section.default-section.bg-noise#section_1  
             h2 
               | Committed to 
               span your goals.
@@ -50,21 +57,29 @@ block content
               a(href="#") Sadis & Goldberg
               | , we believe that every action we take as lawyers should lead to greater success for our clients. Our passion for service, deep business and financial services experience, and sensible billing model provide uncommon value without compromise.
 
-          section.default-section#section_3 
+          section.default-section 
             .main__images-box
-              .main__image-big
+              .main__image-big.overlay__wrapper
+                .overlay__box
+                  .overlay-item
+                  .overlay-item
                 img(src="img/section__img1.jpg", alt="")
 
               .main__image-small
+                .overlay__wrapper
+                  .overlay__box
+                    .overlay-item
+                    .overlay-item
                 img(src="img/section__img2.jpg", alt="")
 
-            h2 
-              span Bespoke
-              |  legal solutions.
+            div#section_2
+              h2 
+                span Bespoke
+                |  legal solutions.
 
-            p Every business is as unique as the entrepreneurs who drive them forward. We invest the time needed to fully understand your business, values, and goals—and align our services to maximize effectiveness and impact. We build and nurture long-term relationships based on earned trust and measurable results.
+              p Every business is as unique as the entrepreneurs who drive them forward. We invest the time needed to fully understand your business, values, and goals—and align our services to maximize effectiveness and impact. We build and nurture long-term relationships based on earned trust and measurable results.
 
-          section.default-section.bg-noise#section_4
+          section.default-section.bg-noise#section_3 
             h2 
               |  What we can do 
               span for you.
@@ -145,7 +160,7 @@ block content
               .custom-accordion__panel
                 p At Sadis & Goldberg, we believe that every action we take as lawyers should lead to greater success for our clients. Our passion for service, deep business and financial services experience, and sensible billing model provide uncommon value without compromise.
 
-          section.default-section.feedback-section.bg-noise#section_5
+          section.default-section.feedback-section.bg-noise#section_4 
             .splide.feedback-slider 
               .splide__arrows
                 button.splide__arrow.splide__arrow--prev Prev
@@ -174,7 +189,7 @@ block content
                         span.feedback__author-name John Sterling
                         span.feedback__author-status Founder, Sterling Fund Managers
 
-          section.default-section.blog-section.bg-noise#section_6
+          section.default-section.blog-section.bg-noise#section_5 
             .blog-section__title-line
               h2 News & Trends
               .blog-section__tabs-box 
@@ -226,7 +241,7 @@ block content
                 svg(width="19" height="19" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg")
                   <path d="M5.71306 3.21467L5.7815 4.32584L14.4213 3.79374L2.38973 15.8253L3.17694 16.6125L15.2085 4.58095L14.6764 13.2207L15.7875 13.2892L16.422 2.98751L16.0147 2.5802L5.71306 3.21467Z"/>
 
-          section.default-section#section_7 
+          section.default-section#section_6  
             h2 
               | Let’s 
               span talk.
@@ -244,4 +259,4 @@ block content
                       <path d="M5.71306 3.71467L5.7815 4.82584L14.4213 4.29374L2.38973 16.3253L3.17694 17.1125L15.2085 5.08095L14.6764 13.7207L15.7875 13.7892L16.422 3.48751L16.0147 3.0802L5.71306 3.71467Z"/>
                   textarea#contact_msg(name="", cols="30", rows="3", placeholder="Your message").form-input
 
-          section.default-section.bg-noise.placeholder-section#section_8
+          section.default-section.bg-noise.placeholder-section#section_7 
