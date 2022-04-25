@@ -54,9 +54,71 @@ $( document ).ready(function() {
   }
   tabs('.blog-section__tab-btn', '.blog-section__tab-panel');
 
+  //Search
+  function searchBtn(btn) {
+    $(btn).on('click', function(evt) {
+        evt.preventDefault();
+
+        if($(btn).hasClass('active')) {
+            closeSearch();
+        } else {
+            $('.nav__search-content').removeClass('opened');
+            $(this).addClass('active');
+            $(this).siblings('.nav__search-content').addClass('opened');
+        }
+    });
+  }
+  searchBtn('#search-btn');
   
+  function searchCloseBtn(btn) {
+    $(btn).on('click', function(evt) {
+        evt.preventDefault();
+        closeSearch();
+    });
+  }
+  searchCloseBtn('#search-close-btn');
+
+  function closeSearch() {
+    $('.nav__search-content.opened').removeClass('opened');
+    $('.nav__btn-search.active').removeClass('active');
+  }
+
+  //Mobile menu
+  function btnMobileMenu(btn) {
+    $(btn).on('click', function(evt) {
+        evt.preventDefault();
+
+        if($('.nav__menu').hasClass('show')) {
+            mobileMenuClose();
+        } else {
+            closeSearch();
+            mobileMenuShow();
+            $('.backdrop').on('click', mobileMenuClose);
+            $('#menu-close-btn').on('click', mobileMenuClose);
+            $( window ).on('resize', mobileMenuClose);
+        }
+    });
+  }
+  btnMobileMenu('#btn-mobile-menu');
 });
 
+
+function mobileMenuShow() {
+    $('#nav__mobile-menu').addClass('show');
+    $('body').append('<div class="backdrop" style="display: none;"></div>');
+    $('.backdrop').fadeIn();
+    $('body').addClass('fixed');
+}
+
+function mobileMenuClose() {
+    $('#nav__mobile-menu').removeClass('show');
+    $('body').removeClass('fixed');
+    $('.backdrop').remove();
+
+    $('.backdrop').off('click', mobileMenuClose);
+    $('#menu-close-btn').off('click', mobileMenuClose);
+    $( window ).off('resize', mobileMenuShow);
+}
 
 /*!
  * Scrollspy Plugin

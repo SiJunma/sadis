@@ -1,10 +1,23 @@
 @import 'variables';
 
+.backdrop {
+  @media screen and (max-width: 992px) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(23, 24, 28, 0.7);
+    z-index: 9;
+  }
+}
+
 .nav {
   height: 80px;
   background: #fff;
   display: flex;
   align-items: center;
+  position: relative;
 
   @media screen and (max-width: 576px) {
     height: 75px;
@@ -74,6 +87,58 @@
         }
       }
     }
+
+    .nav__menu-close {
+      display: none;
+    }
+
+    .nav__contact-btn {
+      display: none;
+
+      @media screen and (max-width: 576px) {
+        display: flex;
+        margin-left: 40px;
+        margin-top: 40px;
+      }
+    }
+
+    &.show {
+      @media screen and (max-width: 992px) {
+        display: block;
+        position: absolute;
+        background: #fff;
+        width: 270px;
+        z-index: 10;
+        right: 0;
+        z-index: 10;
+        top: 0;
+        padding-bottom: 47px;
+        max-height: 95vh;
+        overflow: auto;
+  
+        ul {
+          flex-direction: column;
+          align-items: flex-start;
+          text-align: left;
+          padding-left: 40px;
+          row-gap: 32px;
+
+          li {
+            a {
+              font-size: 16px;
+            }
+          }
+        }
+
+        .nav__menu-close {
+          display: flex;
+          margin-left: auto;
+          margin-top: 10px;
+          padding: 20px;
+          margin-bottom: -22px;
+        }
+      }
+    }
   }
 
   &__interactive {
@@ -88,25 +153,134 @@
 
     &-content {
       opacity: 0;
+      top: 70px;
       visibility: hidden;
       height: 0;
       width: 0;
       position: absolute;
       display: none;
-
+      right: 0;
+      z-index: 10;
+      background: #FFFFFF;
+      align-items: center;
       transition: opacity 0.3s ease;
+
+      @media screen and (max-width: 992px) {
+        right: calc(-35px - 22px);
+      }
 
       &.opened {
         opacity: 1;
         width: auto;
         visibility: visible;
         height: auto;
+        display: flex;
+
+        @media screen and (max-width: 576px) {
+          width: 90vw;
+          top: 65px;
+
+          form {
+            flex-grow: 1;
+            flex-shrink: 1;
+          }
+        }
+
+        @media screen and (max-width: 425px) {
+          width: calc(100vw - 24px);
+        }
+      }
+    }
+
+    &-line {
+      display: flex;
+      position: relative;
+
+      margin: 10px;
+
+      @media screen and (max-width: 576px) {
+        flex-grow: 1;
+        flex-shrink: 1;
+      }
+
+      input {
+        height: 37px;
+        background: #F2F5FA;
+        border: 1px solid #D5DDE6;
+        font-size: 16px;
+        padding: 0 15px;
+        width: 360px;
+
+        @media screen and (max-width: 576px) {
+          flex-shrink: 1;
+          flex-grow: 1;
+          width: 100%;
+        }
+
+        color: #53596D;
+        outline: none;
+
+        &::placeholder {
+            color: #82889C;
+        }
+
+        &:focus, &:active {
+            background: #FBFCFF;
+            border: 1px solid $mainBlue;
+            color: #53596D;
+            caret-color: $mainBlue;
+        }
+      }
+
+      .btn {
+        flex-shrink: 0;
+
+        @media screen and (max-width: 425px) {
+          padding: 0 17px;
+        }
+      }
+    }
+
+    &-close {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 37px;
+      width: 37px;
+      margin-right: 10px;
+      flex-shrink: 0;
+      flex-grow: 0;
+
+      @media screen and (max-width: 425px) {
+        margin-right: 5px;
+        margin-left: -5px;
+      }
+
+      svg {
+        width: 18px;
+        height: 18px;
+        object-fit: contain;
       }
     }
   }
 
   &__btn-search {
-    padding-right: 0;
+    height: 37px;
+    width: 37px;
+    flex-shrink: 0;
+    padding: 0;
+    margin-left: 30px;
+
+    @media screen and (max-width: 576px) {
+      margin-left: 0;
+    }
+
+    &.active {
+      svg {
+        stroke: $mainBlue;
+      }
+    }
   }
 }
 

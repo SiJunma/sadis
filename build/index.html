@@ -39,7 +39,12 @@
 <path d="M22.3034 16.61L19.8019 15.2973L15.9455 13.1265L9.79608 9.74395L8.3369 8.98666L13.444 6.20997L21.0005 10.3498L23.502 8.98666L14.2257 3.93812C13.7046 3.63521 13.0792 3.63521 12.5581 3.93812L4.58471 8.27987C4.27203 8.48181 4.1678 8.73424 4.1678 9.03715C4.1678 9.28958 4.32414 9.49152 4.5326 9.64298L7.24251 11.1575L10.8905 13.177L17.2483 16.7109L18.447 17.3672L13.7046 19.942C13.444 20.0935 13.1314 20.0935 12.9229 19.942L5.73121 16.0041L3.33398 17.3168L12.506 22.3653C13.0792 22.6682 13.7567 22.6682 14.33 22.3653L22.3034 17.9731C22.8245 17.6702 22.8245 16.9129 22.3034 16.61Z" />
 </g>
               </svg></a></div>
-          <div class="nav__menu"> 
+          <div class="nav__menu" id="nav__mobile-menu">
+            <button class="btn btn-close nav__menu-close" id="menu-close-btn">Close Menu 
+              <svg width="19" height="18" viewBox="0 0 19 18" xmlns="http://www.w3.org/2000/svg"><rect x="17.6318" y="0.161133" width="1" height="24" transform="rotate(45 17.6318 0.161133)"/>
+<rect x="18.3389" y="17.1318" width="1" height="24" transform="rotate(135 18.3389 17.1318)"/>
+              </svg>
+            </button>
             <ul> 
               <li><a href="#">Firm</a></li>
               <li><a href="#">People</a></li>
@@ -47,7 +52,7 @@
               <li><a href="#">Insights</a></li>
               <li><a href="#">NEWS</a></li>
               <li><a href="#">Join Us</a></li>
-            </ul>
+            </ul><a class="btn btn-line nav__contact-btn" href="#">Contact </a>
           </div>
           <div class="nav__interactive"> <a class="btn btn-line nav__contact-btn" href="#">Contact </a>
             <div class="nav__search">
@@ -58,17 +63,19 @@
               </button>
               <div class="nav__search-content" id="search-content"> 
                 <form>
-                  <input id="navSearch" type="text" name="search" placeholder="Search">
-                  <button class="btn btn-blue" type="submit">Search</button>
+                  <div class="nav__search-line">
+                    <input id="navSearch" type="text" name="search" placeholder="Search">
+                    <button class="btn btn-blue" type="submit">Search</button>
+                  </div>
                 </form>
-                <button class="btn btn-close nav__search-close">Close search 
+                <button class="btn btn-close nav__search-close" id="search-close-btn">Close search 
                   <svg width="19" height="18" viewBox="0 0 19 18" xmlns="http://www.w3.org/2000/svg"><rect x="17.6318" y="0.161133" width="1" height="24" transform="rotate(45 17.6318 0.161133)"/>
 <rect x="18.3389" y="17.1318" width="1" height="24" transform="rotate(135 18.3389 17.1318)"/>
                   </svg>
                 </button>
               </div>
             </div>
-            <button class="btn btn-burger">
+            <button class="btn btn-burger" id="btn-mobile-menu">
                Menu <span> </span><span> </span><span> </span></button>
           </div>
         </div>
